@@ -1,133 +1,116 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+    padding: 0;               /* Elimina el espacio interno por defecto */
+    margin: 0;                /* Elimina el margen por defecto */
+    box-sizing: border-box;  /* Hace que el ancho incluya padding y borde */
 }
 :root {
-    --color-primario: #000000;
-    --color-secundario: #0c0889;
-    --color-fondo: #f4f4f4;
-    --color-texto: #060606;
-    --color-texto-blanco: white;
-    --color-dinero: green;
+    --color-primario: #000000;         /* Negro: para encabezado y pie */
+    --color-secundario: #0c0889;       /* Azul oscuro: para secciones como bienvenida */
+    --color-fondo: #f4f4f4;            /* Fondo gris claro: base del sitio */
+    --color-texto: #060606;            /* Texto principal en gris oscuro */
+    --color-texto-blanco: white;       /* Texto en blanco para contraste */
+    --color-dinero: green;             /* Verde para mostrar precios */
 }
-
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background-color: var(--color-fondo);
-    color: var(--color-texto);
+    font-family: Arial, sans-serif;               /* Fuente sin serifas para legibilidad */
+    margin: 0;                                    /* Sin margen exterior */
+    background-color: var(--color-fondo);         /* Color de fondo definido arriba */
+    color: var(--color-texto);                    /* Color de texto principal */
 }
-
-/* Encabezado */
+/* ========== ENCABEZADO ========== */
 .encabezado {
-    background-color: var(--color-primario);
-    color: var(--color-texto-blanco);
-    padding: 16px;
+    background-color: var(--color-primario);      /* Fondo negro */
+    color: var(--color-texto-blanco);             /* Texto blanco */
+    padding: 16px;                                /* Espaciado interno */
 }
-
 .encabezado__titulo {
-    margin: 0;
+    margin: 0;                                    /* Sin margen adicional */
 }
-
 .encabezado__navegacion {
-    margin-top: 8px;
+    margin-top: 8px;                              /* Separación entre título y enlaces */
 }
-
 .navegacion__enlace {
-    display: inline-block;
-    margin-right: 16px;
-    color: var(--color-texto-blanco);
-    text-decoration: none;
-    font-weight: bold;
+    display: inline-block;                        /* Enlaces en línea con forma de bloque */
+    margin-right: 16px;                           /* Espacio entre enlaces */
+    color: var(--color-texto-blanco);             /* Color blanco */
+    text-decoration: none;                        /* Sin subrayado */
+    font-weight: bold;                            /* Texto en negrita */
 }
-
+/* ========== CONTENIDO PRINCIPAL (bienvenida) ========== */
 .contenido {
-    background-color: var(--color-secundario);
-    color: var(--color-texto-blanco);
-    text-align: center;
-    padding: 32px;
+    background-color: var(--color-secundario);    /* Fondo azul oscuro */
+    color: var(--color-texto-blanco);             /* Texto blanco */
+    text-align: center;                           /* Centrado */
+    padding: 32px;                                /* Espacio interno */
 }
-
 .contenido__titulo {
-    font-size: 32px;
-    margin-bottom: 8px;
+    font-size: 32px;                              /* Título grande */
+    margin-bottom: 8px;                           /* Espacio debajo del título */
 }
-
 .contenido__descripcion {
-    font-size: 19px;
+    font-size: 19px;                              /* Texto descriptivo más pequeño */
 }
-
-/* Productos */
+/* ========== SECCIÓN DE PRODUCTOS ========== */
 .productos {
-    padding: 32px;
-    background-color: var(--color-fondo);
+    padding: 32px;                                /* Espaciado interno */
+    background-color: var(--color-fondo);         /* Fondo gris claro */
 }
-
 .productos__titulo {
-    text-align: center;
-    font-size: 29px;
-    margin-bottom: 32px;
+    text-align: center;                           /* Título centrado */
+    font-size: 29px;                              /* Tamaño grande */
+    margin-bottom: 32px;                          /* Separación inferior */
 }
-
 .productos__lista {
-    text-align: center;
+    text-align: center;                           /* Centrado para los productos */
 }
-
 .producto {
-    display: inline-block;
-    background-color: var(--color-texto-blanco);
-    border: 1px solid #ccc;
-    padding: 16px;
-    width: 200px;
-    margin: 8px;
-    text-align: center;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: inline-block;                        /* Permite que estén uno al lado del otro */
+    background-color: var(--color-texto-blanco);  /* Fondo blanco */
+    border: 1px solid #ccc;                       /* Borde gris claro */
+    padding: 16px;                                /* Espacio interno */
+    width: 300px;                                 /* Ancho fijo */
+    margin: 8px;                                  /* Espacio externo */
+    text-align: center;                           /* Contenido centrado */
+    border-radius: 8px;                           /* Esquinas redondeadas */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);      /* Sombra suave */
 }
-
 .producto__imagen {
-    width: 100%;
-    height: 300px;
-    object-fit:contain;
-    border-radius: 4px;
+    width: 100%;                                  /* Ancho total del contenedor */
+    height: 200px;                                /* Altura fija para todas las imágenes */
+    object-fit: contain;                          /* Ajuste sin recortar la imagen */
+    border-radius: 4px;                           /* Bordes ligeramente redondeados */
 }
-
 .producto__nombre {
-    font-size: 19px;
-    margin: 8px 0;
+    font-size: 19px;                              /* Tamaño de texto medio */
+    margin: 8px 0;                                /* Espacio arriba y abajo */
 }
-
 .producto__precio {
-    color: var(--color-dinero);
-    font-weight: bold;
-    margin: 8px 0;
+    color: var(--color-dinero);                   /* Verde para el precio */
+    font-weight: bold;                            /* Texto en negrita */
+    margin: 8px 0;                                /* Espacio arriba y abajo */
 }
-
 .producto__boton {
-    margin-top: 8px;
-    padding: 8px;
-    cursor: pointer;
-    border: none;
-    border-radius: 4px;
-    font-weight: bold;
+    font-size: 18px;                              /* El texto será de 18 píxeles */
+    margin-top: 8px;                              /* Espacio sobre el botón */
+    padding: 10px;                                 /* Espaciado interno */
+    cursor: pointer;                              /* Cursor tipo mano */
+    border: none;                                 /* Sin borde */
+    border-radius: 4px;                           /* Esquinas redondeadas */
+    font-weight: bold;                            /* Negrita */
 }
-
 .producto__boton--primario {
-    background-color: var(--color-secundario);
-    color: var(--color-texto-blanco);
+    background-color: var(--color-secundario);    /* Fondo azul oscuro */
+    color: var(--color-texto-blanco);             /* Texto blanco */
 }
-
-/* Pie de página */
+/* ========== PIE DE PÁGINA ========== */
 .pie {
-    background-color: var(--color-primario);
-    color: var(--color-texto-blanco);
-    text-align: center;
-    padding: 16px;
-    margin-top: 32px;
+    background-color: var(--color-primario);      /* Fondo negro */
+    color: var(--color-texto-blanco);             /* Texto blanco */
+    text-align: center;                           /* Centrado */
+    padding: 60px;                                /* Espaciado interno */
+    margin-top: 32px;                             /* Separación superior */
 }
-
 .pie__texto {
-    margin: 0;
-    font-size: 14px;
+    margin: 0;                                    /* Sin margen adicional */
+    font-size: 20px;                              /* Tamaño de texto 20 pixeles */
 }
