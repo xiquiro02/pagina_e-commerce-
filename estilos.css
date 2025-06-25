@@ -1,0 +1,133 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --color-primario: #000000;
+    --color-secundario: #0c0889;
+    --color-fondo: #f4f4f4;
+    --color-texto: #060606;
+    --color-texto-blanco: white;
+    --color-dinero: green;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+}
+
+/* Encabezado */
+.encabezado {
+    background-color: var(--color-primario);
+    color: var(--color-texto-blanco);
+    padding: 16px;
+}
+
+.encabezado__titulo {
+    margin: 0;
+}
+
+.encabezado__navegacion {
+    margin-top: 8px;
+}
+
+.navegacion__enlace {
+    display: inline-block;
+    margin-right: 16px;
+    color: var(--color-texto-blanco);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contenido {
+    background-color: var(--color-secundario);
+    color: var(--color-texto-blanco);
+    text-align: center;
+    padding: 32px;
+}
+
+.contenido__titulo {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.contenido__descripcion {
+    font-size: 19px;
+}
+
+/* Productos */
+.productos {
+    padding: 32px;
+    background-color: var(--color-fondo);
+}
+
+.productos__titulo {
+    text-align: center;
+    font-size: 29px;
+    margin-bottom: 32px;
+}
+
+.productos__lista {
+    text-align: center;
+}
+
+.producto {
+    display: inline-block;
+    background-color: var(--color-texto-blanco);
+    border: 1px solid #ccc;
+    padding: 16px;
+    width: 200px;
+    margin: 8px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.producto__imagen {
+    width: 100%;
+    height: 300px;
+    object-fit:contain;
+    border-radius: 4px;
+}
+
+.producto__nombre {
+    font-size: 19px;
+    margin: 8px 0;
+}
+
+.producto__precio {
+    color: var(--color-dinero);
+    font-weight: bold;
+    margin: 8px 0;
+}
+
+.producto__boton {
+    margin-top: 8px;
+    padding: 8px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.producto__boton--primario {
+    background-color: var(--color-secundario);
+    color: var(--color-texto-blanco);
+}
+
+/* Pie de página */
+.pie {
+    background-color: var(--color-primario);
+    color: var(--color-texto-blanco);
+    text-align: center;
+    padding: 16px;
+    margin-top: 32px;
+}
+
+.pie__texto {
+    margin: 0;
+    font-size: 14px;
+}
